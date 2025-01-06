@@ -12,6 +12,10 @@
 .tohc-header-expanded {
     @apply absolute top-[72px] w-[100vw] left-[calc(-50vw+50%)] text-center z-50 animate-slideDown bg-white;
 }
+.header__altertive-block{
+    @apply h-[92px] w-full flex;
+}
+
 
 .tohc-button {
     @apply rounded-[23px] border-solid  border-[0.8px] font-title text-[17px] font-[600] leading-[30px] 
@@ -39,4 +43,16 @@
 
 .discover__img__animation{
     @apply translate-x-[0];
+}
+.customize-bg{
+    @apply bg-[#fff];
+}
+.customize-img1{
+    @apply bg-[url('https://demo.epic-webdesign.com/tf-launchpage/v1/images/about2.jpg')] bg-cover bg-no-repeat;
+}
+.customize-img2{
+    @apply bg-[url('https://demo.epic-webdesign.com/tf-launchpage/v1/images/about5.jpg')] bg-cover bg-no-repeat bg-center;
+}
+.customize-img3{
+    @apply bg-[url('https://demo.epic-webdesign.com/tf-launchpage/v1/images/about1.jpg')] bg-cover bg-no-repeat bg-right;
 }

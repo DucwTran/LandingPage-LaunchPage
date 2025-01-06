@@ -2,6 +2,7 @@
 const header = document.querySelector('.header');
 const headerBar = document.querySelector(".header__bar");
 const headerMenu = document.querySelector(".header__menu");
+const headerAltertive = document.querySelector(".header__altertive");
 
 window.addEventListener("resize", () => {
     const screenWidth = window.innerWidth;
@@ -27,8 +28,10 @@ document.addEventListener('click', (e) =>{
 window.addEventListener("scroll", () => {
     if (window.scrollY > 300) {
         header.classList.add("header__scroll");
+        headerAltertive.classList.add("header__altertive-block");
     } else {
         header.classList.remove("header__scroll");
+        headerAltertive.classList.remove("header__altertive-block");
     }
 })
 //End Header
@@ -83,3 +86,21 @@ inputContainers.forEach((inputContainer)=>{
     })
 });
 //End Home
+
+//Customer
+const customizeItems = document.querySelectorAll('.customize__item');
+const customizeImg = document.querySelector('.customize__img');
+
+customizeItems.forEach((item, index) => {
+    item.addEventListener("click", () => {
+        customizeItems.forEach(i => i.classList.remove('customize-bg'));
+        item.classList.add('customize-bg');
+
+        for(let tmp = 1; tmp <=3 ; tmp++){
+            customizeImg.classList.remove(`customize-img${tmp}`);
+        }
+        customizeImg.classList.add(`customize-img${index + 1}`);
+    });
+});
+
+//End Customize
