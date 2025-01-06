@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tohc-header-item {
+    @apply text-[#071e55] font-title  text-[17px] font-[600] py-[10px] px-[15px] hover:text-redpage transition-all ease-in-out duration-[600] bg-white;
+}
+
+.tohc-header-expanded {
+    @apply absolute top-[72px] w-[100vw] left-[calc(-50vw+50%)] text-center z-50 animate-slideDown bg-white;
+}
+
+.tohc-button {
+    @apply rounded-[23px] border-solid  border-[0.8px] font-title text-[17px] font-[600] leading-[30px] 
+    py-[9px] px-[18px] mr-[15px] ml-[10px] mt-[15px] lg:mt-[0px] border-redpage text-white bg-redpage
+    hover:bg-white hover:text-redpage transition-all ease-in-out duration-500;
+}
+
+.header__scroll{
+    @apply fixed top-0 left-0;
+}
+
+.home__main-form-name{
+    @apply bg-[#f9f9f9] border-[#f1f1f1] rounded-[5px] border-solid flex items-center h-[52px] mb-[25px] leading-[24px] 
+    py-[1px] pl-[18.25px] pr-[40.15px];
+}
+.home__main-form-name:focus-within {
+    @apply border-solid border-[2px] border-[black];
+}
+.home__main-form-name-input {
+    @apply focus:outline-none bg-[#f9f9f9];
+}
+.home__main-form__animation{
+    @apply transition-all animate-showAndScale;
+}
+
+.discover__img__animation{
+    @apply translate-x-[0];
+}
