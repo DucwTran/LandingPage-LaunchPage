@@ -195,7 +195,7 @@
 
         <div class="customize  bg-[#f1faff] pt-[90px] pb-[100px]">
             <div class="container w-[1140px] mx-auto px-8 flex flex-col lg:flex-row justify-center items-center gap-[5px] lg:gap-[40px]">
-                <div class="customize__img customize-img1 rounded-[10px] h-[456px] w-[520px] mb-[20px] lg:mb-[0px] lg:order-1"></div>
+                <div class="customize__img customize-img1 rounded-[10px] h-[456px] w-[520px] mb-[20px] lg:mb-[0px] lg:order-1 transition-all duration-500 ease-in-out"></div>
                 <div class="customize__items flex flex-col gap-[10px] max-w-[570px]">
                     <div class="customize__item flex items-center justify-between w-[550px] customize-bg hover:bg-[#fff] py-[20px] cursor-pointer transition-all ease-in-out duration-700">
                         <div class="customize__item-icon ml-[30px] w-[80px] h-[80px] rounded-[50%] text-[#1e90ff] text-[40px] leading-[80px] mt-[1px] mr-[25px] mb-[10px] text-center bg-[#fcfcfc] border-solid border-[1.2px] border-[##eaeaea]">
@@ -228,7 +228,45 @@
             </div>
         </div>
 
-        <div class="w-full h-[1000px] bg-red-900"></div>
+        <!--Parallax-->
+        <div class="parallax relative">
+            <div class="parallax__main z-10 absolute bottom-[-1px] right-0 top-[-1px] left-0 bg-[#e52f37] opacity-90">
+                <div class="container w-[1240px] mx-auto px-8  flex flex-col items-center mt-[100px]">
+                    <div class="parallax__main-title font-title text-[38px] w-[900px] font-bold  leading-[45.6px] mb-[60px] text-center text-white">
+                        Fun Facts About Our Agency
+                    </div>
+                    <div class="parallax__main-items flex flex-col md:flex-row sm:gap-[10px] md:gap-[30px] lg:gap-[90px] ">
+                        <div class="parallax__main-item flex flex-col justify-center items-center gap-[15px]">
+                            <i class="fa-regular fa-gem text-white text-[45px] leading-[60px] text-center"></i>
+                            <span class="text-white text-[28px] font-[650] leading-[40px] text-center">1050+</span>
+                            <p class="text-white font-text leading-[28px] mb-[20px] text-center">Projects Completed</p>
+                        </div>
+                        <div class="parallax__main-item flex flex-col justify-center items-center gap-[15px]">
+                            <i class="fa-regular fa-heart text-white text-[45px] leading-[60px] text-center"></i>
+                            <span class="text-white text-[28px] font-[650] leading-[40px] text-center">217K</span>
+                            <p class="text-white font-text leading-[28px] mb-[20px] text-center">Happy Clients</p>
+                        </div>
+                        <div class="parallax__main-item flex flex-col justify-center items-center gap-[15px]">
+                            <i class="fa-solid fa-award text-white text-[45px] leading-[60px] text-center"></i>
+                            <span class="text-white text-[28px] font-[650] leading-[40px] text-center">1210</span>
+                            <p class="text-white font-text leading-[28px] mb-[20px] text-center">Design Awards</p>
+                        </div>
+                        <div class="parallax__main-item flex flex-col justify-center items-center gap-[15px]">
+                            <i class="fa-solid fa-anchor text-white text-[45px] leading-[60px] text-center"></i>
+                            <span class="text-white text-[28px] font-[650] leading-[40px] text-center">2137</span>
+                            <p class="text-white font-text leading-[28px] mb-[20px] text-center">Line Of Codes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <div
+                class="bg-cover z-0 bg-no-repeat bg-top h-[1000px] md:h-[500px] bg-[url('https://demo.epic-webdesign.com/tf-launchpage/v1/images/bg3.jpg')] bg-fixed w-[100vw] relative left-[calc(-50vw+50%)]"
+            ></div>
+        </div>
+        <!--End Parallax-->
+
+
+        <div class="w-full h-[3000px] bg-red-900"></div>
     </div>
     <script src="./js/index.js"></script>
 </body>
