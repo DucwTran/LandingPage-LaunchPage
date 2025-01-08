@@ -52,23 +52,29 @@ const handleScrollOrLoad = (element, animationClass, state) => { // Hàm xử l�
     }
 };
 
-const discoverState = { hasAnimated: false }; // Trạng thái của từng khối
-const mainFormState = { hasAnimated: false };
+let discoverState = { hasAnimated: false }; // Trạng thái của từng khối
+let mainFormState = { hasAnimated: false };
+let portfolioState = { hasAnimated: false };
+
 
 
 const discoverImg = document.querySelector('.discover__img-main'); // Áp dụng cho từng khối
 const mainForm = document.querySelector('.home__main-form'); 
+const itemPortfolio = document.querySelector('.portfolio-items');
+console.log(itemPortfolio);
 
 
 window.addEventListener('load', () => {
     handleScrollOrLoad(discoverImg, 'discover__img__animation', discoverState);
     handleScrollOrLoad(mainForm, 'home__main-form__animation', mainFormState);
+    handleScrollOrLoad(itemPortfolio, 'portfolio__animation', portfolioState);
 
 });
 
 window.addEventListener('scroll', () => {
     handleScrollOrLoad(discoverImg, 'discover__img__animation', discoverState);
     handleScrollOrLoad(mainForm, 'home__main-form__animation', mainFormState);
+    handleScrollOrLoad(itemPortfolio, 'portfolio__animation', portfolioState);
 
 });
 //End Animation khi scroll or load
@@ -104,3 +110,28 @@ customizeItems.forEach((item, index) => {
 });
 
 //End Customize
+
+//Comment
+const nameComment = document.querySelectorAll(".comment__item-name");
+nameComment.forEach((nameElement, index) => {
+    nameElement.addEventListener("click", () => {
+        // Lấy danh sách các thẻ B
+        let mainComment = document.querySelectorAll(".comment__item-main");
+
+        // Lấy thẻ B tương ứng với A được nhấn
+        const selectedComment = mainComment[index];
+
+        // Kiểm tra trạng thái của thẻ B
+        if (selectedComment.classList.contains("hidden")) {
+            // Nếu thẻ B đang ẩn, ẩn tất cả các thẻ B khác và hiển thị thẻ B tương ứng
+            mainComment.forEach(mainElement => {
+                mainElement.classList.add("hidden");
+            });
+            selectedComment.classList.remove("hidden");
+        } else {
+            // Nếu thẻ B đang hiển thị, ẩn nó
+            selectedComment.classList.add("hidden");
+        }
+    });
+});
+//End Comment

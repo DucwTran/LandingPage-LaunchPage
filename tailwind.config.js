@@ -12,6 +12,10 @@ module.exports = {
       textshadow: {
         title: "#373737 1px 1px 0px",
       },
+      boxShadow: {
+        custom: "0px 2px 8px 0px rgba(99, 99, 99, 0.2)",
+        customnobottom: "0px 0px 8px 0px rgba(99, 99, 99, 0.2)",
+      },
       colors: {
         redpage: "#e52f37",
       },
@@ -31,6 +35,10 @@ module.exports = {
         showAndScale: "showAndScale 2s ease forwards",
       },
     },
+  },
+  corePlugins: {
+    before: true,
+    after: true,
   },
   plugins: [require("tailwindcss-textshadow")],
 };

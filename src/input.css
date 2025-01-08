@@ -56,3 +56,12 @@
 .customize-img3{
     @apply bg-[url('https://demo.epic-webdesign.com/tf-launchpage/v1/images/about1.jpg')] bg-cover bg-no-repeat bg-right;
 }
+.portfolio__overlay{
+    @apply bg-[#e52f37] absolute inset-0 border-[22px] border-gray-200 opacity-80; 
+}
+.portfolio__overlay-icon{
+    @apply  absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-[40px] text-white;
+}
+.portfolio__animation{
+    @apply opacity-100;
+}
