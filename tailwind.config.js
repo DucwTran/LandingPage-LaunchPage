@@ -15,6 +15,7 @@ module.exports = {
       boxShadow: {
         custom: "0px 2px 8px 0px rgba(99, 99, 99, 0.2)",
         customnobottom: "0px 0px 8px 0px rgba(99, 99, 99, 0.2)",
+        customButton: "0px 8px 40px 0px rgba(0, 0, 0, 0.098)",
       },
       colors: {
         redpage: "#e52f37",

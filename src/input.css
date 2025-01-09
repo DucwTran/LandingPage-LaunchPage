@@ -65,3 +65,23 @@
 .portfolio__animation{
     @apply opacity-100;
 }
+
+.member__item{
+    @apply bg-white rounded-[8px] text-[#212529] leading-6 text-center pb-[30px] w-[350px] lg:w-[310px] xl:w-[350px] ;
+}
+.member__item-img{
+    @apply w-[350px] h-[350px] lg:w-[310px] lg:h-[280px] xl:w-[350px] xl:h-[350px] rounded-t-[8px] leading-6 ;
+}
+.member__item-name{
+    @apply text-[#454545] font-title text-[18px] font-[700] leading-[21.6px] mt-[20px] mb-[1px] text-center; 
+}
+.member__item-pos{
+    @apply text-[#acacac] font-text text-[17px] leading-[28px] mb-[50px] text-center relative
+    after:absolute  after:w-[60px] after:h-[5px] after:bg-red-600 after:bottom-[-30px] after:left-[50%] after:translate-x-[-50%]; 
+}
+.member__item-detail{
+    @apply text-[#7c8595] font-text text-[17px] leading-[28px] mb-[20px] text-center max-w-[300px] mx-auto; 
+}
+.feature__item{
+    @apply w-[374px];
+}
