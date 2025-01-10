@@ -51,31 +51,73 @@ const handleScrollOrLoad = (element, animationClass, state) => { // Hàm xử l�
         state.hasAnimated = true; // Đánh dấu đã thực hiện animation
     }
 };
+const handleScrollOrLoadFeature = (element,  items, state) => { // Hàm xử lý scroll hoặc load
+    if (!state.hasAnimated && isInViewport(element)) {
+        items.forEach((item, index) =>{
+            setTimeout(()=>{
+                item.classList.add('opacity-100');
+            }, index * 400);
+        });
+        state.hasAnimated = true; // Đánh dấu đã thực hiện animation
+    }
+};
+
+const handleScrollOrLoadPrice = (element,  item, animationClass, state) => { // Hàm xử lý scroll hoặc load
+    if (!state.hasAnimated && isInViewport(element)) {
+        item.classList.add(animationClass);
+        state.hasAnimated = true; // Đánh dấu đã thực hiện animation
+    }
+};
+const handleScrollOrLoadPriceEnd = (element,  item, animationClass, state) => { // Hàm xử lý scroll hoặc load
+    if (state.hasAnimated ) {
+        setTimeout(()=>{
+            item.classList.remove(animationClass);
+            item.classList.remove('opacity-0');
+        }, 1800);
+    }
+};
 
 let discoverState = { hasAnimated: false }; // Trạng thái của từng khối
 let mainFormState = { hasAnimated: false };
 let portfolioState = { hasAnimated: false };
+let featureState = { hasAnimated: false };
+let priceState1 = { hasAnimated: false };
+let priceState2 = { hasAnimated: false };
 
 
 
 const discoverImg = document.querySelector('.discover__img-main'); // Áp dụng cho từng khối
 const mainForm = document.querySelector('.home__main-form'); 
 const itemPortfolio = document.querySelector('.portfolio-items');
-console.log(itemPortfolio);
+const feature = document.querySelector('.feature');
 
+const price = document.querySelector('.price');
+const priceMonthly = document.querySelector('.price__monthly');
+const priceAnnualy = document.querySelector('.price__annualy');
+
+const features = document.querySelectorAll('.feature__item');
+const featureArr = [...features];
 
 window.addEventListener('load', () => {
     handleScrollOrLoad(discoverImg, 'discover__img__animation', discoverState);
     handleScrollOrLoad(mainForm, 'home__main-form__animation', mainFormState);
     handleScrollOrLoad(itemPortfolio, 'portfolio__animation', portfolioState);
-
+    handleScrollOrLoadPrice(price, priceMonthly, 'price__animation1', priceState1);
+    handleScrollOrLoadPrice(price, priceAnnualy, 'price__animation2', priceState2);
+    handleScrollOrLoadPriceEnd(price, priceMonthly, 'price__animation1', priceState1);
+    handleScrollOrLoadPriceEnd(price, priceAnnualy, 'price__animation2', priceState2);
+    handleScrollOrLoadFeature(feature, featureArr, featureState);
 });
 
 window.addEventListener('scroll', () => {
     handleScrollOrLoad(discoverImg, 'discover__img__animation', discoverState);
     handleScrollOrLoad(mainForm, 'home__main-form__animation', mainFormState);
     handleScrollOrLoad(itemPortfolio, 'portfolio__animation', portfolioState);
-
+    handleScrollOrLoadPrice(price, priceMonthly, 'price__animation1', priceState1);
+    handleScrollOrLoadPrice(price, priceAnnualy, 'price__animation2', priceState2);
+    handleScrollOrLoadPriceEnd(price, priceMonthly, 'price__animation1', priceState1);
+    handleScrollOrLoadPriceEnd(price, priceAnnualy, 'price__animation2', priceState2);
+    handleScrollOrLoadFeature(feature, featureArr, featureState);
 });
 //End Animation khi scroll or load
 

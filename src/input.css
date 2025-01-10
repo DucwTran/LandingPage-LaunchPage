@@ -4,6 +4,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 
 .tohc-header-item {
     @apply text-[#071e55] font-title  text-[17px] font-[600] py-[10px] px-[15px] hover:text-redpage transition-all ease-in-out duration-[600] bg-white;
@@ -83,5 +88,20 @@
     @apply text-[#7c8595] font-text text-[17px] leading-[28px] mb-[20px] text-center max-w-[300px] mx-auto; 
 }
 .feature__item{
-    @apply w-[374px];
+    @apply w-[80%] lg:w-[374px];
+}
+.price__animation1{
+    @apply animate-showAndScalePrice1;
+}
+.price__animation2{
+    @apply animate-showAndScalePrice2;
+}   
+.delay-1000 { 
+    animation-delay: 500ms; 
+}
+.contact__input-item{
+    @apply w-[500px] md:w-[270px] lg:w-[350px] h-[56px] placeholder:text-white border-white rounded-[5px] border-solid border-[1px] text-white  leading-6 mb-[15px] py-[1px] px-[7px] bg-inherit outline-none;
+}
+.contact__input-item__last{
+    @apply w-[500px] h-[56px] md:w-[556px] lg:w-[716px] md:h-[120px] placeholder:text-white border-white rounded-[5px] border-solid border-[1px] text-white  leading-6 mb-[15px] py-[1px] px-[7px] bg-inherit outline-none;
 }
