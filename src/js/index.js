@@ -73,7 +73,8 @@ const handleScrollOrLoadPriceEnd = (element,  item, animationClass, state) => { 
         setTimeout(()=>{
             item.classList.remove(animationClass);
             item.classList.remove('opacity-0');
-        }, 1800);
+            item.classList.remove('delay-1000');
+        }, 3000);
     }
 };
 
@@ -83,13 +84,14 @@ let portfolioState = { hasAnimated: false };
 let featureState = { hasAnimated: false };
 let priceState1 = { hasAnimated: false };
 let priceState2 = { hasAnimated: false };
-
+let formContactState = { hasAnimated: false };
 
 
 const discoverImg = document.querySelector('.discover__img-main'); // Áp dụng cho từng khối
 const mainForm = document.querySelector('.home__main-form'); 
 const itemPortfolio = document.querySelector('.portfolio-items');
 const feature = document.querySelector('.feature');
+const contactForm = document.querySelector('.contact__input');
 
 const price = document.querySelector('.price');
 const priceMonthly = document.querySelector('.price__monthly');
@@ -102,17 +104,18 @@ window.addEventListener('load', () => {
     handleScrollOrLoad(discoverImg, 'discover__img__animation', discoverState);
     handleScrollOrLoad(mainForm, 'home__main-form__animation', mainFormState);
     handleScrollOrLoad(itemPortfolio, 'portfolio__animation', portfolioState);
+    handleScrollOrLoad(contactForm, 'contact__input-animation', formContactState);
     handleScrollOrLoadPrice(price, priceMonthly, 'price__animation1', priceState1);
     handleScrollOrLoadPrice(price, priceAnnualy, 'price__animation2', priceState2);
     handleScrollOrLoadPriceEnd(price, priceMonthly, 'price__animation1', priceState1);
     handleScrollOrLoadPriceEnd(price, priceAnnualy, 'price__animation2', priceState2);
     handleScrollOrLoadFeature(feature, featureArr, featureState);
 });
-
 window.addEventListener('scroll', () => {
     handleScrollOrLoad(discoverImg, 'discover__img__animation', discoverState);
     handleScrollOrLoad(mainForm, 'home__main-form__animation', mainFormState);
     handleScrollOrLoad(itemPortfolio, 'portfolio__animation', portfolioState);
+    handleScrollOrLoad(contactForm, 'contact__input-animation', formContactState);
     handleScrollOrLoadPrice(price, priceMonthly, 'price__animation1', priceState1);
     handleScrollOrLoadPrice(price, priceAnnualy, 'price__animation2', priceState2);
     handleScrollOrLoadPriceEnd(price, priceMonthly, 'price__animation1', priceState1);
@@ -177,3 +180,8 @@ nameComment.forEach((nameElement, index) => {
     });
 });
 //End Comment
+
+//Portfolio
+
+
+//End Portfolio

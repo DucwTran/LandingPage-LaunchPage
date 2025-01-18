@@ -30,6 +30,11 @@ module.exports = {
           "50%": { opacity: "1", transform: "scale(1.1)" },
           "100%": { opacity: "1", transform: "scale(0.9)" },
         },
+        showAndScaleContact: {
+          "0%": { opacity: "0", transform: "scale(0)" },
+          "50%": { opacity: "1", transform: "scale(1.1)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
+        },
         showAndScalePrice1: {
           "0%": { opacity: "0", transform: "scale(0)" },
           "50%": { opacity: "1", transform: "scale(1.1)" },
@@ -46,6 +51,7 @@ module.exports = {
         showAndScale: "showAndScale 2s ease forwards",
         showAndScalePrice1: "showAndScalePrice1 2s ease forwards",
         showAndScalePrice2: "showAndScalePrice2 2s ease forwards",
+        showAndScaleContact: "showAndScaleContact 2s ease forwards",
       },
     },
   },

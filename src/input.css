@@ -105,3 +105,6 @@
 .contact__input-item__last{
     @apply w-[500px] h-[56px] md:w-[556px] lg:w-[716px] md:h-[120px] placeholder:text-white border-white rounded-[5px] border-solid border-[1px] text-white  leading-6 mb-[15px] py-[1px] px-[7px] bg-inherit outline-none;
 }
+.contact__input-animation{
+    @apply animate-showAndScaleContact;
+}
