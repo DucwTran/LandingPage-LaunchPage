@@ -181,7 +181,3 @@ nameComment.forEach((nameElement, index) => {
 });
 //End Comment
 
-//Portfolio
-
-
-//End Portfolio
