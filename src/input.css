@@ -9,6 +9,9 @@
     padding: 0;
     margin: 0;
 }
+body {
+    overflow-x: hidden;
+}
 
 .tohc-header-item {
     @apply text-[#071e55] font-title  text-[17px] font-[600] py-[10px] px-[15px] hover:text-redpage transition-all ease-in-out duration-[600] bg-white;
@@ -49,8 +52,11 @@
 .discover__img__animation{
     @apply translate-x-[0];
 }
+.customize__item:hover {
+    @apply shadow-[0px_8px_24px_rgba(149,157,165,0.2)];
+}
 .customize-bg{
-    @apply bg-[#fff];
+    @apply bg-[#fff] shadow-[0px_8px_24px_rgba(149,157,165,0.2)];
 }
 .customize-img1{
     @apply bg-[url('https://demo.epic-webdesign.com/tf-launchpage/v1/images/about2.jpg')] bg-cover bg-no-repeat;
